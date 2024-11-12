@@ -1,0 +1,7 @@
+# Contoh path:
+/templates/index.html
+  X-Frame-Options: DENY
+
+# Header untuk seluruh situs:
+/*
+  X-Frame-Options: SAMEORIGIN

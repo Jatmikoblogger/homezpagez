@@ -1,0 +1,27 @@
+[build]
+  command = "NODE_OPTIONS=--openssl-legacy-provider npm run build"
+  functions = "functions"
+ 
+[build.environment]
+  NODE_VERSION = "18"
+
+[functions]
+  included_files = ["_layout/*","ads/*","assets/*","*"]
+
+[[headers]]
+  # Terapkan header ini untuk semua halaman
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    Content-Security-Policy = "default-src 'self'"
+
+[[redirects]]
+  from = "/*"
+  to = "/.netlify/functions/core/:splat"
+  status = 200
+  force = true
+
+[[edge_functions]]
+  path = "/*"
+  function = "hello"
+

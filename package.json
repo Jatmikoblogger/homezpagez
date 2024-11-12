@@ -1,0 +1,29 @@
+{
+  "name": "cdom-dev",
+  "version": "1.0.0",
+  "description": "Website wallpaper yang menarik.",
+  "main": "functions/core.js",
+  "scripts": {
+    "start": "node index",
+    "build": "netlify-lambda build server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "wallpaper",
+    "images",
+    "duckduckgo",
+    "scraper",
+    "netlify"
+  ],
+  "author": "laatahzan.com>",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "node-cache": "^5.1.2",
+    "serverless-http": "^3.1.0",
+    "unirest": "^0.6.0"
+  },
+  "devDependencies": {
+    "netlify-lambda": "^0.4.0"
+  }
+}
